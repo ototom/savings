@@ -12,6 +12,9 @@ import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.componen
 import { ModalComponent } from './modal/modal.component';
 import { EditItemModalComponent } from './edit-item-modal/edit-item-modal.component';
 import { FormsModule } from '@angular/forms';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from 'src/environments/environment';
+import { NotificationComponent } from './notification/notification.component';
 
 @NgModule({
   declarations: [
@@ -24,11 +27,13 @@ import { FormsModule } from '@angular/forms';
     AddItemModalComponent,
     ConfirmDialogComponent,
     ModalComponent,
-    EditItemModalComponent
+    EditItemModalComponent,
+    NotificationComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebase)
   ],
   providers: [],
   bootstrap: [AppComponent]

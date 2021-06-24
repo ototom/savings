@@ -4,7 +4,6 @@ import { DataService } from '../data.service';
 @Component({
   selector: 'app-savings-list',
   templateUrl: './savings-list.component.html',
-  styleUrls: ['./savings-list.component.scss']
 })
 export class SavingsListComponent implements OnInit, OnDestroy {
   data: {value: number, desc: string, id: string}[]=[];

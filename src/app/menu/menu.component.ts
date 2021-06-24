@@ -4,8 +4,12 @@ import { ModalService } from '../modal/modal.service';
 
 @Component({
   selector: 'app-menu',
-  templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.scss']
+  template: `
+    <h4>Manage your list</h4>
+    <div class="d-grid gap-2">
+      <button class="btn btn-success" (click)="onClickAddButton()">Add new</button>
+    </div>
+  `,
 })
 export class MenuComponent {
 
@@ -13,9 +17,6 @@ export class MenuComponent {
 
   onClickAddButton() {
     this.modalService.addModal("ADD");
-  }
-  onClickClearButton() {
-    this.dataService.clearAllItems();
   }
 
 }

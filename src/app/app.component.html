@@ -14,3 +14,21 @@
 <app-add-item-modal *ngIf="getIsModalActive('ADD')"></app-add-item-modal>
 <app-edit-item-modal *ngIf="getIsModalActive('EDIT')"></app-edit-item-modal>
 <app-confirm-dialog *ngIf="getIsModalActive('DELETE')"></app-confirm-dialog>
+<div
+  class="
+    toast-container
+    position-absolute
+    p-3
+    bottom-0
+    start-50
+    translate-middle-x
+  "
+  style="z-index: 9999"
+  *ngIf="notifications.length > 0"
+>
+  <app-notification
+    *ngFor="let notification of notifications"
+    [message]="notification.message"
+    [id]="notification.id"
+  ></app-notification>
+</div>

@@ -4,7 +4,6 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-savings-list-item',
   templateUrl: './savings-list-item.component.html',
-  styleUrls: ['./savings-list-item.component.scss']
 })
 export class SavingsListItemComponent {
   @Input() item = <{value: number, desc: string, id: string}>{};
