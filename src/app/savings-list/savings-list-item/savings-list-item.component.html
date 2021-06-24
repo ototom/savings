@@ -1,0 +1,28 @@
+<div class="card mb-3">
+  <div
+    class="card-header text-light fw-bold"
+    [ngClass]="{ 'bg-success': item.value > 0, 'bg-danger': item.value < 0 }"
+  >
+    {{ item.value }}{{ "$" }}
+  </div>
+
+  <div class="card-body">
+    <p class="card-text">
+      {{ item.desc }}
+    </p>
+  </div>
+  <div class="card-footer bg-transparent text-end">
+    <button
+      class="btn btn-outline-danger btn-sm me-1"
+      (click)="onClickDeleteButton()"
+    >
+      Delete
+    </button>
+    <button
+      class="btn btn-outline-primary btn-sm"
+      (click)="onClickEditButton()"
+    >
+      Edit
+    </button>
+  </div>
+</div>

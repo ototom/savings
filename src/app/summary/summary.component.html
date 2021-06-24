@@ -1,0 +1,12 @@
+<div class="d-flex">
+  <span class="fs-4">Summary:</span>
+  <span
+    class="fs-4 fw-bold text-success ms-auto"
+    [ngClass]="{
+      'text-success': savingsInTotal > 0,
+      'text-secondary': savingsInTotal === 0,
+      'text-danger': savingsInTotal < 0
+    }"
+    >$ {{ savingsInTotal }}</span
+  >
+</div>

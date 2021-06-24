@@ -1,0 +1,15 @@
+<h4>Your savings</h4>
+
+<div
+  *ngIf="data.length === 0; else elementsBlock"
+  class="alert alert-secondary my-5"
+  role="alert"
+>
+  There are no items on your list
+</div>
+<ng-template #elementsBlock>
+  <app-savings-list-item
+    *ngFor="let element of data"
+    [item]="element"
+  ></app-savings-list-item>
+</ng-template>
